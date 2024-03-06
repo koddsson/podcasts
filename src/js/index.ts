@@ -10,6 +10,7 @@ for (const item of await reader.getItems()) {
   const element = template.content.cloneNode(true) as HTMLElement;
   element.querySelector(".title")!.textContent = item.title;
   element.querySelector("a")?.setAttribute("data-url", item.link);
+  element.querySelector("a")?.setAttribute("data-image", item.image);
   element.querySelector("a")?.addEventListener("click", onItemSelect);
   document.body.append(element);
 }
@@ -25,13 +26,8 @@ function onItemSelect(event: PointerEvent) {
     artist: "The Yard",
     artwork: [
       {
-        src: "https://whatpwacando.today/src/img/media/mirror-conspiracy256x256.jpeg",
         sizes: "256x256",
-        type: "image/jpeg",
-      },
-      {
-        src: "https://whatpwacando.today/src/img/media/mirror-conspiracy512x512.jpeg",
-        sizes: "512x512",
+        src: link.dataset.image!,
         type: "image/jpeg",
       },
     ],

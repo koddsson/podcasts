@@ -7,6 +7,7 @@ interface Post {
   description: string;
   date: Date;
   link: string;
+  image: string;
 }
 
 export class RssReader {
@@ -48,7 +49,10 @@ export class RssReader {
       item.querySelector("enclosure")?.getAttribute("url") ||
       "";
 
-    return { title, description, date, link };
+    const image =
+      item.querySelector("itunes:image")?.getAttribute("href") || "";
+
+    return { title, description, date, link, image };
   }
 
   async #getSubscriptions() {
