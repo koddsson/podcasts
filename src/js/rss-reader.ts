@@ -50,7 +50,7 @@ export class RssReader {
       "";
 
     const image =
-      item.getElementsByTagName("itunes:image")[0].getAttribute("href") || "";
+      item.getElementsByTagName("itunes:image")[0]?.getAttribute("href") || "";
 
     return { title, description, date, link, image };
   }
