@@ -25,10 +25,8 @@
   "bugs": {
     "url": "https://github.com/koddsson/web-dev/issues"
   },
-  "prettier": "@github/prettier-config",
   "homepage": "https://github.com/koddsson/web-dev#readme",
   "devDependencies": {
-    "@github/prettier-config": "^0.0.6",
     "@koddsson/eslint-config": "^0.1.2",
     "@open-wc/testing": "^4.0.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
