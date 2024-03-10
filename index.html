@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>My app!</title>
+    <title>Pondcasts</title>
 
     <!-- https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs -->
     <link rel="icon" href="/public/favicon.ico" sizes="any"><!-- 32×32 -->
@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="./src/css/index.css" />
   </head>
   <body>
-    <h1>My app!</h1>
-    <audio controls></audio>
+    <h1>Pondcasts</h1>
+    <div id="episode-list"></div>
+    <audio-player></audio-player>
     <template id="episode-row">
       <a href="#" data-url="">
         <p class="title"></p>
